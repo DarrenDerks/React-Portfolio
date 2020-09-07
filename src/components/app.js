@@ -12,37 +12,50 @@ import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
 
 export default class App extends Component {
-  constructor(props)
-{
-  super(props);
+  constructor(props) {
+    super(props);
 
-  this.state = {
-    loggedInStatus: "NOT_LOGGED_IN"
+    this.state = {
+      loggedInStatus: "NOT_LOGGED_IN",
+    };
+    this.handleSuccessfulLogin = this.handleSuccessfulLogin.bind(this);
+    this.handleUnsuccessfulLogin = this.handleUnsuccessfulLogin.bind(this);
   }
-} 
 
-handleSuccessfulLogin() {
-  this.setState({
-    loggedInStatus: "LOGGED-IN"
-  })
-}
+  handleSuccessfulLogin() {
+    this.setState({
+      loggedInStatus: "LOGGED-IN",
+    });
+  }
 
-handleUnSucessfulLogin() {
-  this.setState({
-    loggedInStatus: "NOT_LOGGED-IN"
-})
-}
+  handleUnsuccessfulLogin() {
+    this.setState({
+      loggedInStatus: "NOT_LOGGED-IN",
+    });
+  }
 
-render() {
+  render() {
     return (
       <div className="container">
         <Router>
           <div>
             <NavigationContainer />
 
+            <h2>{this.state.loggedInStatus}</h2>
+
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/auth" component={Auth} />
+
+              <Route
+                path="/auth"
+                render={props => (
+                  <Auth
+                    {...props}
+                    handleSuccessfulLogin={this.handleSuccessfulLogin}
+                    handleUnSucessfulLogin={this.handleUnSucessfulLogin}
+                  />
+                )}
+              />
               <Route path="/about-me" component={About} />
               <Route path="/contact" component={Contact} />
               <Route path="/blog" component={Blog} />
