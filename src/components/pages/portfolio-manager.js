@@ -29,7 +29,7 @@ export default class PortfolioManger extends Component {
 
   handleEditClick(portfolioItem) {
     this.setState({
-      profolioToEdit: portfolioItem,
+      portfolioToEdit: portfolioItem,
     });
   }
 
