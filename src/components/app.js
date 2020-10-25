@@ -14,7 +14,6 @@ import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
 import Icons from "./helper/icon";
 
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -78,7 +77,13 @@ export default class App extends Component {
   }
 
   authorizedPages() {
-    return [< Route key="portfolio-manager" path="/portfolio-manager" component={PortfolioManager} />];
+    return [
+      <Route
+        key="portfolio-manager"
+        path="/portfolio-manager"
+        component={PortfolioManager}
+      />,
+    ];
   }
 
   render() {
@@ -106,7 +111,14 @@ export default class App extends Component {
               />
               <Route path="/about-me" component={About} />
               <Route path="/contact" component={Contact} />
-              <Route path="/blog" component={Blog} />
+
+              <Route
+                path="/blog"
+                render={(props) => (
+                  <Blog {...props} loggedInStatus={this.state.loggedInStatus} />
+                )}
+              />
+
               <Route path="/b/:slug" component={BlogDetail} />
               {this.state.loggedInStatus === "LOGGED_IN"
                 ? this.authorizedPages()
