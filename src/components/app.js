@@ -21,8 +21,9 @@ export default class App extends Component {
     Icons();
 
     this.state = {
-      loggedInStatus: "NOT_LOGGED_IN",
+      loggedInStatus: "NOT_LOGGED_IN"
     };
+
     this.handleSuccessfulLogin = this.handleSuccessfulLogin.bind(this);
     this.handleUnsuccessfulLogin = this.handleUnsuccessfulLogin.bind(this);
     this.handleSuccessfulLogout = this.handleSuccessfulLogout.bind(this);
@@ -30,28 +31,28 @@ export default class App extends Component {
 
   handleSuccessfulLogin() {
     this.setState({
-      loggedInStatus: "LOGGED-IN",
+      loggedInStatus: "LOGGED_IN"
     });
   }
 
   handleUnsuccessfulLogin() {
     this.setState({
-      loggedInStatus: "NOT_LOGGED-IN",
+      loggedInStatus: "NOT_LOGGED_IN"
     });
   }
 
   handleSuccessfulLogout() {
     this.setState({
-      loggedInStatus: "NOT_LOGGED-IN",
+      loggedInStatus: "NOT_LOGGED_IN"
     });
   }
 
   checkLoginStatus() {
     return axios
       .get("https://api.devcamp.space/logged_in", {
-        withCredentials: true,
+        withCredentials: true
       })
-      .then((response) => {
+      .then(response => {
         const loggedIn = response.data.logged_in;
         const loggedInStatus = this.state.loggedInStatus;
 
@@ -59,15 +60,15 @@ export default class App extends Component {
           return loggedIn;
         } else if (loggedIn && loggedInStatus === "NOT_LOGGED_IN") {
           this.setState({
-            loggedInStatus: "LOGGED_IN",
+            loggedInStatus: "LOGGED_IN"
           });
         } else if (!loggedIn && loggedInStatus === "LOGGED_IN") {
           this.setState({
-            loggedInStatus: "NOT_LOGGED_IN",
+            loggedInStatus: "NOT_LOGGED_IN"
           });
         }
       })
-      .catch((error) => {
+      .catch(error => {
         console.log("Error", error);
       });
   }
@@ -82,7 +83,7 @@ export default class App extends Component {
         key="portfolio-manager"
         path="/portfolio-manager"
         component={PortfolioManager}
-      />,
+      />
     ];
   }
 
@@ -101,7 +102,7 @@ export default class App extends Component {
 
               <Route
                 path="/auth"
-                render={(props) => (
+                render={props => (
                   <Auth
                     {...props}
                     handleSuccessfulLogin={this.handleSuccessfulLogin}
@@ -109,19 +110,20 @@ export default class App extends Component {
                   />
                 )}
               />
+
               <Route path="/about-me" component={About} />
               <Route path="/contact" component={Contact} />
 
               <Route
                 path="/blog"
-                render={(props) => (
+                render={props => (
                   <Blog {...props} loggedInStatus={this.state.loggedInStatus} />
                 )}
               />
 
               <Route
                 path="/b/:slug"
-                render={(props) => (
+                render={props => (
                   <BlogDetail
                     {...props}
                     loggedInStatus={this.state.loggedInStatus}

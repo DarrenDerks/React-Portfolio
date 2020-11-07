@@ -18,6 +18,7 @@ export default class Auth extends Component {
   handleUnsuccessfulAuth() {
     this.props.handleUnsuccessfulLogin();
   }
+
   render() {
     return (
       <div className="auth-page-wrapper">
@@ -27,6 +28,7 @@ export default class Auth extends Component {
             backgroundImage: `url(${loginImg})`,
           }}
         />
+
         <div className="right-column">
           <Login
             handleSuccessfulAuth={this.handleSuccessfulAuth}
