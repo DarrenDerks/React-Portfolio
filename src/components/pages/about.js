@@ -13,7 +13,7 @@ export default function () {
         }}
       ></div>
       <div className="right-column">
-        <p>Hi, my name is Darren Derks and I’m a software developer who’s passionate about all thing's computers and computer software. I recently just finished an excelled full stack software engineer program at Bottega University where I gained skills in <text style={styles.bold}>REACT</text>, <text style={styles.bold}>JavaScript</text>, <text style={styles.bold}>Python</text>, <text style={styles.bold}>MySQL</text>, <text style={styles.bold}>HTML</text>, <text style={styles.bold}>CSS</text>, and <text style={styles.bold}>Sass</text>.</p>
+        <p>Hi, my name is Darren Derks and I’m a software developer who’s passionate about all thing's computers and computer software. I recently just finished an excelled full stack software engineer program at Bottega University where I gained skills in REACT, JavaScript, Python, MySQL, HTML, CSS, and Sass.</p>
 
         <p>I’m a developer, because I’m inspired by the idea of making software that makes life easier or more enjoyable for people. Put simply, I love to learn and this portfolio and the projects contained inside are a great example of that. Not only did I use all the skills listed above but I also used other things I chose to learn myself like hooks, Speechly, machine learning, etc.</p>
 
