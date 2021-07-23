@@ -13,32 +13,15 @@ export default function () {
         }}
       ></div>
       <div className="right-column">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-        officia dicta, suscipit aliquam, est laudantium aut ipsa eos repellat
-        quasi reprehenderit architecto officiis sed vitae delectus commodi nam
-        nostrum animi. Tempora iure aut sapiente sunt minima aperiam quas et
-        quam ullam nesciunt magni nobis, doloribus autem laudantium nisi quos ad
-        perspiciatis velit nemo. Illo, eligendi excepturi autem deleniti
-        quibusdam eaque! Aliquid harum quia et laborum ducimus libero minima
-        vitae enim assumenda, maiores ullam quisquam blanditiis ad non
-        doloremque! Voluptates, suscipit excepturi? Iste minima quos eum sunt,
-        dolorum eius repudiandae blanditiis. Dolore eaque sint ex ut, vero
-        voluptates excepturi, delectus corporis odio temporibus quibusdam soluta
-        officia eveniet pariatur laboriosam veniam minus at harum aliquid? Error
-        eos magnam mollitia repudiandae, in enim. Aperiam nostrum consequuntur
-        veritatis ratione reprehenderit cupiditate autem tempora quisquam
-        consectetur cumque, quae, sequi repellendus, quos facere. Tempore ipsam
-        odio at sequi reprehenderit incidunt soluta? At maxime ratione nulla
-        voluptates? Adipisci quos repellendus placeat nemo eius voluptas sit nam
-        id, ullam voluptatibus nobis eum? Ducimus illum accusamus voluptatibus
-        ad architecto repellat animi commodi dignissimos minima sit cumque,
-        quasi ipsa sint? Iusto esse molestiae consequatur maiores atque, cumque
-        voluptas blanditiis expedita culpa quam vero et commodi sed harum iste
-        at labore, eaque magni repellat provident officia laborum quaerat
-        doloremque nam! Veritatis. Nisi id hic sed voluptas laudantium. Laborum
-        quam adipisci laboriosam reiciendis sit accusantium, ad corrupti sunt
-        consectetur, magnam qui dolore rem necessitatibus. Voluptatem hic ea
-        explicabo vero unde earum porro! Incidunt facilis illo esse velit hic
+      Hi, my name is Darren Derks and I’m a software developer who’s passionate about all thing's computers and computer software. I recently just finished an excelled full stack software engineer program at Bottega University where I gained skills in REACT, JavaScript, Python, MySQL, HTML, CSS, and Sass.  
+
+      I’m a developer, because I’m inspired by the idea of making software that makes life easier or more enjoyable for people. Put simply, I love to learn and this portfolio and the projects contained inside are a great example of that. Not only did I use all the skills listed above but I also used other things I chose to learn myself like hooks, Speechly, machine learning, etc. 
+
+      I’m currently looking for an opportunity to work with a JavaScript framework but also open to learn any stack that is needed. I’m a quick learner and able to adapt to whatever stack is used. Ultimately, I’d like to be the most valuable developer to any team I become a part of. 
+
+      When I’m not busy building apps or learning the latest coding tricks, you can find me checking out whatever festival is in town, playing video games and eating about anything that is not liver. 
+
+      If you’d like to learn more about what makes me tick feel free to visit my contact section. 
       </div>
     </div>
   );
